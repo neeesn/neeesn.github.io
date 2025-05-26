@@ -1,0 +1,21 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;    
+    color: #333;
+    background-color: #f4f4f4;
+
+
+}
+nav {
+    max-height: 64px;
+    padding-left: 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: inline-block;
+    height: 32px;
+    width: auto;
+    background-image: url(../images/ic-logo.svg);
+    background-size: cover;
+}
