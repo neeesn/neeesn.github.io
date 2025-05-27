@@ -1,17 +1,45 @@
+/** CSS RESET **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
 html {
     font-family: Arial, sans-serif;
     font-size: 16px;    
     color: #333;
+ 
    
    }
+body {
+    max-width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+   
+
 
 nav {
+    position: fixed;
     max-height: 64px;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    background-color: white;
+    border-bottom: 1px solid #dbd8d8;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 10;
     
-}
+    }
+
 
 .logo {
     display: flex;
@@ -46,8 +74,6 @@ nav ul {
     list-style: none;
     padding: 20px;
     align-items: center;
-   
-
 }
 nav ul li {
     padding: 0 16px;
@@ -58,3 +84,39 @@ nav ul li a{
     font-weight: 600;
     font-size: 1rem;
 }
+
+
+
+main {
+   
+}   
+/* Hero section */
+#hero {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    
+}
+.hero-image{
+    flex: 60%;
+    padding: 20px 0 20px 20px;
+  /*  border: 1px solid red;*/
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.hero-text   {
+    flex: 40%;
+    padding: 20px;
+    border: 1px solid blue;
+   
+}
+
+
+.thesis-video-container video {
+    width: 100%;
+    height: auto;
+}   
