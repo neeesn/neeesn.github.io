@@ -13,15 +13,21 @@ ol, ul {
 html {
     font-family: Arial, sans-serif;
     font-size: 16px;    
-    color: #333;
- 
-   
+    color: #666;
    }
+
+ h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+
+}  
 body {
-    max-width:1200px;
+    max-width:1100px;
     margin-left: auto;
     margin-right: auto;
     
+        
 }
    
 
@@ -34,10 +40,9 @@ nav {
     align-content: center;
     background-color: white;
     border-bottom: 1px solid #dbd8d8;
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     z-index: 10;
-    
     }
 
 
@@ -48,7 +53,7 @@ nav {
     font-family: "Ancizar Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 1.5rem;
-
+   
 }
 
 .logo-lion {
@@ -78,45 +83,254 @@ nav ul {
 nav ul li {
     padding: 0 16px;
 }
+
 nav ul li a{
     text-decoration: none;
     color: #333;
     font-weight: 600;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-
+nav ul li a:hover{
+    color: lightblue;
+}
 
 main {
-   
+  
 }   
+
+
 /* Hero section */
 #hero {
+   background-color: #d8d8d8;
+  
+}
+#hero, #news, #thesis-news, footer{
+   top: 64px; /* Adjusted for fixed nav height */
+   padding: 32px 0px 32px 24px;
+}
+
+
+#hero, #news, #thesis-news, .news-item {
+    position: relative;
     display: flex;
-    flex-wrap: wrap; 
     align-items: center;
+    flex-direction: row;
+ }
+.hero-image, .main-news, .thesis-video-container{
+    flex: 60%;
+    padding-right: 24px;
+    
+  }
+.hero-image img, .main-news img, .news-item-image img {
+    max-width: 100%;    
+    height: auto;    
+}
+
+.hero-text, .news-item-container, .thesis-exhibit-text { 
+    flex: 40%;  
+       
+}
+.hero-text {
+    padding-right: 72px;
+}
+.hero-start-here {
+    display: inline-block;
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.hero-start-here:hover {
+    background-color: #6695fa;
+    color: rgb(0, 2, 7); 
+}
+
+
+
+
+/* NEWS SECTION */
+
+#news, #thesis-news {
+    align-items: flex-start ;  
+    padding-bottom: 32px;  
     
 }
-.hero-image{
-    flex: 60%;
-    padding: 20px 0 20px 20px;
-  /*  border: 1px solid red;*/
+.main-news {
+    min-height: 100%;
+    
+    
 }
-.hero-image img {
+.main-news h2{
+    padding: 24px 0 24px 0px;
+    font-size: 2rem;
+    font-weight: 900;
+   
+}
+.campus-main-news-signature {
+    font-size: 0.9rem;
+    color: grey;
+    padding: 8px 0;
+}
+
+.news-item-container {
+   border-left: 1px solid #d8d8d8;
+}
+
+.news-item { 
+   padding: 16px;
+   transition: background-color 0.3s ease;
+}  
+.news-item:nth-child(1) { 
+   padding-top: 0px;
+}
+
+.news-item:hover {
+    background-color: #d8d8d8;
+}
+
+.news-item-image {
+    flex: 35%;   
+}   
+
+.news-item-text {
+    padding: 0 20px;
+    flex: 65%;
+}   
+.news-item-text p {
+   padding: 8px 0;
+}
+.news-item-text .read-more a {
+    
+    padding: 10px;
+    text-decoration: none;
+    color: #5d7fdb;
+    font-size: 1rem;
+}
+
+/* Online courses section  - Start Learning section*/
+
+
+#online{
+    background-color: #d8d8d8;
+    padding: 32px 24px;
+    position: relative;
+    top: 64px; /* Adjusted for fixed nav height */
+}
+#online h1,
+.thesis_headline h1{
+   font-size: 2rem;
+   font-weight: 900;
+   text-align: center;
+   padding-bottom: 16px;
+}
+
+.online-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: stretch; /* Gør alle børn lige høje */
+    padding: 0px 40px 32px 72px;
+}
+
+
+.course-item {
+    display: flex;
+    flex-direction: column; /* Gør det muligt at strække indhold */
+    justify-content: space-between; /* Fordel indhold jævnt */
+    flex: 1 1 calc(33% - 32px);
+    background-color: white;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 24px;
+    transition: background-color 0.7s ease;
+}
+
+.course-item:hover{
+    background-color: #6695fa;
+}
+
+
+
+.course-item img {
     width: 100%;
-    height: auto;
+    height: auto;  
+    padding-bottom: 16px  
+}
+
+.course-item h3, 
+.course-item p 
+{
+    padding-left: 16px;
+    padding-right: 16px;
+    
     
 }
 
-.hero-text   {
-    flex: 40%;
-    padding: 20px;
-    border: 1px solid blue;
+.online-courses-category {
+    padding: 8px 0px;
+    text-transform: uppercase;
    
 }
 
+
+/* Thesis content */
+
+
+.thesis-video-container {
+    padding: 0px 0px 24px 0px;
+    
+}
 
 .thesis-video-container video {
     width: 100%;
     height: auto;
 }   
+
+.thesis-exhibit-text h3 {
+    padding: 0px 24px 8px 0px;
+  
+}
+.thesis-exhibit-text p {
+    padding-left: 0px;
+  
+}
+.thesis-headline {
+    text-align: center;
+    position:relative;
+    top: 64px; /* Adjusted for fixed nav height */
+    padding-top: 32px;
+}
+ #thesis-news{
+   
+   padding: 16px 0px 32px 24px;
+}
+
+footer {
+    border-top: 1px solid #dbd8d8;
+    padding: 32px 24px;
+    position: relative;
+    top: 64px; /* Adjusted for fixed nav height */
+    display:flex;
+    flex-direction: table-row;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    }
+footer a{
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding-right: 10px;
+}
+footer a:hover{
+    color: lightblue;
+}
